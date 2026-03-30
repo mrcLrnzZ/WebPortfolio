@@ -2,9 +2,10 @@ import monkey from "./assets/monkey.png";
 import ocean from "./assets/Ocean.png";
 import magbibike from "./assets/Bike.png";
 // Collaborative project images
-import openSource from "C:/Users/Administrator/.gemini/antigravity/brain/0ba92d06-0da2-44c4-94a3-c4a548cdc75e/open_source_commits_ui_1774857118564.png";
-import eventApp from "C:/Users/Administrator/.gemini/antigravity/brain/0ba92d06-0da2-44c4-94a3-c4a548cdc75e/event_management_ui_1774857134961.png";
-import hackathon from "C:/Users/Administrator/.gemini/antigravity/brain/0ba92d06-0da2-44c4-94a3-c4a548cdc75e/hackathon_prototype_ui_1774857151247.png";
+import openSource from "./assets/collab1.png";
+import eventApp from "./assets/collab2.png";
+import hackathon from "./assets/collab3.png";
+
 
 function ProjectCard({ project }) {
   return (
@@ -20,16 +21,18 @@ function ProjectCard({ project }) {
           alt={project.title} 
           className="w-full h-full object-cover grayscale brightness-95 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" 
         />
-        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white/90 dark:from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-white/90 dark:from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+
            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-black dark:text-white">Visit Project →</span>
         </div>
       </div>
       
-      <div className="p-5 flex flex-col flex-grow">
+      <div className="p-5 flex flex-col grow">
         <h3 className="text-md font-bold text-gray-900 dark:text-white mb-2 group-hover:text-black dark:group-hover:text-white transition-all tracking-tight">
           {project.title}
         </h3>
-        <p className="text-xs text-gray-600 dark:text-gray-400 mb-4 line-clamp-3 leading-relaxed flex-grow opacity-80">
+        <p className="text-xs text-gray-600 dark:text-gray-400 mb-4 line-clamp-3 leading-relaxed grow opacity-80">
+
           {project.description}
         </p>
         
