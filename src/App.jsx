@@ -29,11 +29,11 @@ function App() {
     <div className="bg-gray-50 dark:bg-gray-950 min-h-screen text-gray-900 dark:text-gray-100 selection:bg-indigo-100 dark:selection:bg-indigo-900/30">
       <div className="max-w-4xl mx-auto px-6 py-12 space-y-10">
         <Header darkMode={darkMode} setDarkMode={setDarkMode} />
-        <div className="grid grid-cols-6 gap-4">
-          <div className="col-span-4">
+        <div className="flex flex-col md:grid md:grid-cols-6 gap-8">
+          <div className="md:col-span-4">
             <About />
           </div>
-          <div className="col-span-2">
+          <div className="md:col-span-2">
             <Experience />
           </div>
           <div className="col-span-6">
@@ -43,6 +43,7 @@ function App() {
             <Projects />
           </div>
         </div>
+
         <Footer />
       </div>
     </div>
