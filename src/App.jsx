@@ -3,6 +3,8 @@ import "./index.css"
 import Footer from "./Footer"
 import Header from "./Header"
 import About from "./about"
+import Experience from "./Experience"
+import Techstack from "./Techstack"
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -23,14 +25,25 @@ function App() {
   }, [darkMode]);
 
   return (
-    <div className="min-h-screen">
-      <div className="max-w-4xl mx-auto px-4 mt-10">
+    <div className="bg-gray-50 dark:bg-gray-950 min-h-screen text-gray-900 dark:text-gray-100 selection:bg-indigo-100 dark:selection:bg-indigo-900/30">
+      <div className="max-w-4xl mx-auto px-6 py-12 space-y-10">
         <Header darkMode={darkMode} setDarkMode={setDarkMode} />
-        <About />
+        <div className="grid grid-cols-6 gap-4">
+          <div className="col-span-4">
+            <About />
+          </div>
+          <div className="col-span-2">
+            <Experience />
+          </div>
+          <div className="col-span-6">
+            <Techstack />
+          </div>
+        </div>
         <Footer />
       </div>
     </div>
   )
 }
+
 
 export default App
