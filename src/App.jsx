@@ -6,6 +6,7 @@ import About from "./about"
 import Experience from "./Experience"
 import Techstack from "./Techstack"
 import Projects from "./Projects"
+import Certificate from "./Certificate"
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -41,6 +42,9 @@ function App() {
           </div>
           <div className="col-span-6">
             <Projects />
+          </div>
+          <div className="col-span-6">
+            <Certificate />
           </div>
         </div>
 
