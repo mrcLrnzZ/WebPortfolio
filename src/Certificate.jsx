@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import introCybersec from './assets/introCybersec.png';
+import introCybersec from './assets/IntroCybersec.png';
 
 const certificates = [
   {

@@ -46,7 +46,7 @@ function Experience() {
                 <h3 className="text-md text-gray-900 dark:text-white group-hover:text-black dark:group-hover:text-white transition-colors font-medium">
                   {exp.title}
                 </h3>
-                <span className="text-sm font-bold text-black dark:text-white mt-0 flex-start mt-2">
+                <span className="text-sm font-bold text-black dark:text-white flex-start mt-2">
                   {exp.year}
                 </span>
               </div>
