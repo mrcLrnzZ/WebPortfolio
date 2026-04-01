@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
 import introCybersec from './assets/IntroCybersec.png';
+import academicexe from './assets/Academicexellence.jpg';
+import claudecodeaction from './assets/claudecodeaction.png';
+import introdatascience from './assets/introdatascience.png';
 
 const certificates = [
   {
@@ -11,17 +14,23 @@ const certificates = [
   },
   {
     id: 2,
-    title: "Introduction to Cyber Security",
-    issuer: "Cisco Networking Academy",
+    title: "Academic Excellence",
+    issuer: "University of Caloocan City",
     date: "2025",
-    image: introCybersec,
+    image: academicexe,
   },
   {
     id: 3,
-    title: "Introduction to Cyber Security",
+    title: "Claude Code in Action",
+    issuer: "Anthropic",
+    date: "2026",
+    image: claudecodeaction,
+  },
+   {   id: 4,
+    title: "Introduction to Data Science",
     issuer: "Cisco Networking Academy",
-    date: "2025",
-    image: introCybersec,
+    date: "2026",
+    image: introdatascience,
   }
 ];
 
