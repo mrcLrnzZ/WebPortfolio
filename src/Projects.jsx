@@ -4,7 +4,7 @@ function ProjectCard({ project }) {
       href={project.link || "#"} 
       target="_blank" 
       rel="noopener noreferrer"
-      className="group bg-white dark:bg-gray-900/40 border border-gray-100 dark:border-gray-800 rounded-sm overflow-hidden hover:border-black dark:hover:border-white transition-all duration-500 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col cursor-pointer"
+      className="group bg-white dark:bg-mauve-950  rounded-sm overflow-hidden transition-all duration-500 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col cursor-pointer"
     >
       <div className="p-5 flex flex-col grow">
         <h3 className="text-md font-bold text-gray-900 dark:text-white mb-2 group-hover:text-black dark:group-hover:text-white transition-all tracking-tight">
@@ -16,7 +16,7 @@ function ProjectCard({ project }) {
         
         <div className="flex flex-wrap gap-2 mt-auto pt-2">
           {project.tech.map((t, i) => (
-            <div key={i} className="flex items-center gap-1.5 px-2 py-1 bg-gray-50 dark:bg-gray-800/30 rounded-sm border border-gray-100 dark:border-gray-800 transition-all group-hover:border-gray-200 dark:group-hover:border-gray-700">
+            <div key={i} className="flex items-center gap-1.5 px-2 py-1 bg-gray-50 dark:bg-gray-800/30 rounded-sm">
               <img 
                 src={`https://cdn.simpleicons.org/${t.icon}`} 
                 alt="" 
@@ -86,10 +86,10 @@ function Projects() {
   ];
 
   return (
-    <div className="mt-10 space-y-10">
+    <div className="space-y-5">
       {/* Featured Projects Section */}
       <section>
-        <h2 className="text-md font-semibold mb-2 text-gray-900 dark:text-gray-100 uppercase tracking-widest border-b border-gray-100 dark:border-gray-800 pb-2">
+        <h2 className="text-md font-semibold mb-2 text-gray-900 dark:text-gray-100 uppercase tracking-widest pb-2">
           Personal Projects
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
@@ -101,7 +101,7 @@ function Projects() {
 
       {/* Collaborative Projects Section */}
       <section>
-        <h2 className="text-md font-semibold mb-2 text-gray-900 dark:text-gray-100 uppercase tracking-widest border-b border-gray-100 dark:border-gray-800 pb-2">
+        <h2 className="text-md font-semibold mb-2 text-gray-900 dark:text-gray-100 uppercase tracking-widest pb-2">
           Collaborative Projects
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">

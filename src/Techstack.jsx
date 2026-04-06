@@ -35,7 +35,7 @@ function Techstack() {
   ];
 
   return (
-    <div className="py-2">
+    <div className="py-2 p-4 dark:bg-mauve-950">
       <h2 className="text-xl font-semibold mb-6 text-gray-900 dark:text-gray-100 flex items-center gap-2">
         Techstack & Tools
       </h2>
@@ -55,11 +55,11 @@ function Techstack() {
                   <img 
                     src={`https://cdn.simpleicons.org/${item.icon}`} 
                     alt="" 
-                    className="w-4 h-4 transition-all group-hover/item:scale-110"
+                    className="w-3 h-3 transition-all group-hover/item:scale-110"
                   />
 
 
-                  <span className="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover/item:text-black dark:group-hover/item:text-white transition-colors">
+                  <span className="text-xs font-medium text-gray-800 dark:text-gray-200 group-hover/item:text-black dark:group-hover/item:text-white transition-colors">
                     {item.name}
                   </span>
                 </div>
@@ -72,4 +72,4 @@ function Techstack() {
   );
 }
 
-export default Techstack;
+export default Techstack;
