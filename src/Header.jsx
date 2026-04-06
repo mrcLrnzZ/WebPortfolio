@@ -1,7 +1,7 @@
 import gillian from './assets/gillian.jpg';
 import gillian1 from './assets/gillian1.jpg';
 
-function Header({ darkMode, setDarkMode }) {
+function Header({ darkMode, setDarkMode, onContactClick }) {
     return (
         <div className="flex flex-col sm:flex-row text-black dark:text-white gap-7 mt-10 p-4 rounded-xl transition-colors duration-300">
             <div className="relative w-48 h-48 mx-auto sm:mx-0 overflow-hidden rounded-lg shadow-lg shrink-0">
@@ -65,7 +65,10 @@ function Header({ darkMode, setDarkMode }) {
             
                 <div className='flex flex-col sm:flex-row items-center gap-3 mt-6 w-full'>
                     <div className='w-full sm:w-auto'>
-                        <button className="w-full text-white text-sm cursor-pointer font-medium rounded-sm bg-gray-900 hover:bg-gray-700 dark:text-black dark:bg-white dark:hover:bg-gray-100 px-6 py-2.5 flex items-center justify-center gap-2 shadow-md transition-all active:scale-95 hover:translate-y-[-2px]">
+                        <button 
+                            onClick={onContactClick}
+                            className="w-full text-white text-sm cursor-pointer font-medium rounded-sm bg-gray-900 hover:bg-gray-700 dark:text-black dark:bg-white dark:hover:bg-gray-100 px-6 py-2.5 flex items-center justify-center gap-2 shadow-md transition-all active:scale-95 hover:translate-y-[-2px]"
+                        >
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                             Send me an email
                         </button>
