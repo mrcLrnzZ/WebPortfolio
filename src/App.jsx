@@ -8,6 +8,7 @@ import Techstack from "./Techstack"
 import Projects from "./Projects"
 import Certificate from "./Certificate"
 import ContactModal from "./ContactModal"
+import Reveal from "./Reveal"
 
 function App() {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -30,27 +31,42 @@ function App() {
 
   return (
     <div className="bg-gray-50 dark:bg-gray-950 min-h-screen text-gray-900 dark:text-gray-100 selection:bg-indigo-100 dark:selection:bg-indigo-900/30">
-      <div className="max-w-4xl mx-auto px-6 py-12 space-y-10">
-        <Header darkMode={darkMode} setDarkMode={setDarkMode} onContactClick={() => setIsContactOpen(true)} />
+      <div className="max-w-4xl mx-auto px-6 py-12 space-y-10 overflow-x-hidden">
+        <Reveal>
+          <Header darkMode={darkMode} setDarkMode={setDarkMode} onContactClick={() => setIsContactOpen(true)} />
+        </Reveal>
+        
         <div className="flex flex-col md:grid md:grid-cols-6 gap-8">
           <div className="md:col-span-4">
-            <About />
+            <Reveal delay={100}>
+                <About />
+            </Reveal>
           </div>
           <div className="md:col-span-2">
-            <Experience />
+            <Reveal delay={200}>
+                <Experience />
+            </Reveal>
           </div>
           <div className="col-span-6">
-            <Techstack />
+            <Reveal delay={100}>
+                <Techstack />
+            </Reveal>
           </div>
           <div className="col-span-6">
-            <Projects />
+            <Reveal delay={100}>
+                <Projects />
+            </Reveal>
           </div>
           <div className="col-span-6">
-            <Certificate />
+            <Reveal delay={100}>
+                <Certificate />
+            </Reveal>
           </div>
         </div>
 
-        <Footer />
+        <Reveal delay={100}>
+            <Footer />
+        </Reveal>
       </div>
       <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
     </div>

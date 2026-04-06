@@ -22,7 +22,7 @@ function Experience() {
   ];
 
   return (
-    <div className="py-2 animate-fade-in-up">
+    <div className="py-2">
       <div className="flex items-center gap-3 mb-10">
 
         <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 tracking-tight">

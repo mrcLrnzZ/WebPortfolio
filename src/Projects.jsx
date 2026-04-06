@@ -86,7 +86,7 @@ function Projects() {
   ];
 
   return (
-    <div className="animate-fade-in-up mt-10 space-y-10">
+    <div className="mt-10 space-y-10">
       {/* Featured Projects Section */}
       <section>
         <h2 className="text-md font-semibold mb-2 text-gray-900 dark:text-gray-100 uppercase tracking-widest border-b border-gray-100 dark:border-gray-800 pb-2">

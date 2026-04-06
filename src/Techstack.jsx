@@ -35,7 +35,7 @@ function Techstack() {
   ];
 
   return (
-    <div className="py-2 animate-fade-in-up">
+    <div className="py-2">
       <h2 className="text-xl font-semibold mb-6 text-gray-900 dark:text-gray-100 flex items-center gap-2">
         Techstack & Tools
       </h2>

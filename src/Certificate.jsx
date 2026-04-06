@@ -93,7 +93,7 @@ function Certificate() {
 
   return (
     <section className="mt-10">
-      <div className="animate-fade-in-up">
+      <div>
         <h2 className="text-xl font-semibold mb-6 text-gray-900 dark:text-gray-100 uppercase tracking-widest border-b border-gray-100 dark:border-gray-800 pb-2">
           Certificates & Achievements
         </h2>
