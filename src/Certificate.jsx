@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 
 import introCybersec from './assets/IntroCybersec.png';
 import academicexe from './assets/Academicexellence.jpg';
@@ -94,7 +95,7 @@ function Certificate() {
   return (
     <section className="mt-10">
       <div>
-        <h2 className="text-xl font-semibold mb-6 text-gray-900 dark:text-gray-100 uppercase tracking-widest border-b border-gray-100 dark:border-gray-800 pb-2">
+        <h2 className="text-xl font-semibold mb-6 text-gray-900 dark:text-gray-100 uppercase tracking-widestpb-2">
           Certificates & Achievements
         </h2>
         
@@ -108,7 +109,7 @@ function Certificate() {
                 <div 
                   key={cert.id} 
                   onClick={() => openModal(cert)}
-                  className="w-full shrink-0 flex flex-col bg-white dark:bg-gray-900/40 border border-gray-100 dark:border-gray-800 rounded-sm overflow-hidden hover:border-black dark:hover:border-white transition-all duration-500 shadow-sm hover:shadow-xl cursor-pointer"
+                  className="w-full shrink-0 flex flex-col bg-white dark:bg-gray-900/40 rounded-sm overflow-hidden hover:border-black dark:hover:border-white transition-all duration-500 shadow-sm hover:shadow-xl cursor-pointer"
                   style={{ width: `calc(${100 / visibleItems}% - ${(visibleItems - 1) * 16 / visibleItems}px)` }}
                 >
                   <div className="w-full aspect-video overflow-hidden border-b border-gray-100 dark:border-gray-800">
@@ -169,11 +170,11 @@ function Certificate() {
         </div>
       </div>
 
-      {/* Full Screen Image Modal - Outside transformed div */}
-      {modalCert && (
+      {/* Full Screen Image Modal - Portalled to body to avoid transform issues */}
+      {modalCert && createPortal(
         <div 
-          className={`fixed inset-0 z-100 flex items-center justify-center p-4 md:p-12 transition-all duration-500 ease-in-out ${
-            isModalOpen ? 'bg-black/25' : 'bg-black/0 backdrop-blur-none opacity-0'
+          className={`fixed inset-0 flex items-center justify-center p-4 md:p-12 transition-all duration-500 ease-in-out z-[9999] ${
+            isModalOpen ? 'bg-black/10 backdrop-blur-sm' : 'bg-black/0 backdrop-blur-none opacity-0'
           }`}
           onClick={closeModal}
         >
@@ -185,7 +186,7 @@ function Certificate() {
           >
             <button 
               onClick={closeModal}
-              className="absolute -top-12 right-0 md:-top-12 md:-right-12 p-3 text-white/50 hover:text-white transition-colors z-110"
+              className="absolute -top-12 right-0 md:-top-16 md:-right-16 p-3 text-white/70 hover:text-white transition-colors z-[10000]"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
             </button>
@@ -193,10 +194,11 @@ function Certificate() {
             <img 
               src={modalCert.image} 
               alt={modalCert.title} 
-              className="max-w-[90vw] max-h-[85vh] object-contain  rounded-sm select-none ring-1 ring-white/10"
+              className="max-w-[90vw] max-h-[85vh] object-contain shadow-2xl rounded-lg select-none ring-1 ring-white/20"
             />
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </section>
   );
